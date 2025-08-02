@@ -1,5 +1,5 @@
 <div align="center">
-  <img src='/public/logo.png' alt='Taskflow' style='width: 50px; height: 50px; border-radius: 100px;'/>
+  <img src='/public/logo.png' alt='Taskflow' style='width: 70px; height: 70px; border-radius: 100px;'/>
  <h1 style='font-size: 50px;'>Taskflow</h1>
 </div>
 
