@@ -1,6 +1,6 @@
 <div align="center">
-  <img src='/public/logo.png' alt='Taskflow' style='width: 50px; height: 50px'/>
-  <p style='font-size: 50px;'>Taskflow</p>
+  <img src='/public/logo.png' alt='Taskflow' style='width: 50px; height: 50px; border-radius: 100px;'/>
+ <p style='font-size: 50px'>Taskflow</p>
 </div>
 
 # Stack🛠️
