@@ -1,4 +1,4 @@
-<div style='display: flex; justify-content: center; align-items: center;'>
+<div align="center">
   <img src='/public/logo.png' alt='Taskflow' style='width: 50px; height: 50px'/>
   <p style='font-size: 50px;'>Taskflow</p>
 </div>
