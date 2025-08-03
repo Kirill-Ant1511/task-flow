@@ -9,8 +9,8 @@ export function DashboardHeading() {
 	const pathname = usePathname()
 	const now = new Date()
 	return (
-		<div className='w-full flex justify-between mb-7'>
-			<h1 className='text-2xl text-foreground/50'>
+		<div className='w-full flex justify-between mb-4'>
+			<h1 className='text-3xl text-primary/70'>
 				{MENU_ITEM.find(item => item.path === pathname)?.title}
 			</h1>
 

@@ -26,7 +26,7 @@ export const mockProfiles: IProfile[] = [
 		name: 'Charlie',
 		surname: 'Williams',
 		email: 'charlie@example.com',
-		avatar: '/avatar.png',
+	                                                                         	avatar: '/avatar.png',
 		createData: new Date('2025-06-03'),
 		messages: [mockMessages[2]]
 	},

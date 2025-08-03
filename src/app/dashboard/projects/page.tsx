@@ -1,17 +1,12 @@
-import { TaskCard } from '@/components/ui/Tasks/TaskCard'
+import { TaskFilter } from '@/components/ui/Tasks/TaskFilter'
 import { mockTasks } from '@/data/mock/Task'
+import { TaskList } from './TaskList'
 
 export default function ProjectsPage() {
 	return (
 		<div>
-			<div className='grid grid-cols-4 gap-4'>
-				{mockTasks.map(task => (
-					<TaskCard
-						task={task}
-						key={task.id}
-					/>
-				))}
-			</div>
+			
+			<TaskList />
 		</div>
 	)
 }
