@@ -1,3 +1,5 @@
+import { Soon } from '@/components/other ui/Soon'
+
 export default function SchedulePage() {
-	return <div>Schedule Page</div>
+	return <Soon title='Schedule' />
 }

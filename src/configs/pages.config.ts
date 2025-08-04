@@ -7,4 +7,7 @@ export class Pages {
 	static SCHEDULE = Pages.BASE + '/schedule'
 	static ACTIVITY = Pages.BASE + '/activity'
 	static TEAM = Pages.BASE + '/my-team'
+	static SUBTASKEDIT(id: string) {
+		return Pages.TASKS + `/${id}`
+	}
 }

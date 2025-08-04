@@ -4,6 +4,7 @@ import type { IMessages, IProfile } from './profile.types'
 export interface ISubTask {
 	id: string
 	title: string
+	description?: string
 	isCompleted: boolean
 }
 

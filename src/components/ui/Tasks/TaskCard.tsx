@@ -19,7 +19,7 @@ export function TaskCard({ task }: Props) {
 	}
 
 	return (
-		<div className='border-secondary border-2 p-2 rounded-lg shadow-md flex flex-col gap-2'>
+		<div className='border-secondary border-2 p-2 rounded-lg shadow-xs flex flex-col gap-2 hover:shadow-lg transition-all duration-150 '>
 			<div className='flex justify-between items-center'>
 				<div className='p-1.5 bg-primary/20 rounded-full'>
 					<task.icon />
@@ -37,7 +37,9 @@ export function TaskCard({ task }: Props) {
 				</div>
 			</div>
 
-			<div className='text-foreground/50'>{task.description}</div>
+			<div className='text-foreground/50 overflow-hidden text-nowrap'>
+				{task.description}
+			</div>
 			<div className='w-[90%] h-0.5 bg-secondary/50 self-center' />
 			<div className='flex justify-between items-center'>
 				<div className='flex -space-x-1.5'>

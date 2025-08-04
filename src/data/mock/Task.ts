@@ -28,6 +28,8 @@ export const mockSubTasks: ISubTask[] = [
 	{
 		id: 'sub-3',
 		title: 'Setup DB',
+		description:
+			'Setup database for the project with postgres and prisma ORM and seed data for the project with faker js',
 		isCompleted: false
 	},
 	{
