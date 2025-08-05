@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react'
-import { SubtasksList } from './SubtasksList'
+import { SubtasksList } from './SubTaskList'
 
 export default function layout({ children }: PropsWithChildren<unknown>) {
 	return (

@@ -1,0 +1,75 @@
+import { PrioritySelect } from '@/components/ui/Projects/Form/PrioritySelect'
+import type { ITask } from '@/types/task.types'
+import { getStringDate } from '@/utils/getStringDate'
+import type { LucideIcon } from 'lucide-react'
+
+import { useState } from 'react'
+import { useForm, type FieldValues } from 'react-hook-form'
+import { SetIconInput } from './SetIconInput'
+
+interface Props {
+	project: ITask
+}
+
+export function EditForm({ project }: Props) {
+	const [icon, setIcon] = useState<LucideIcon>(project.icon)
+	const [priority, setPriority] = useState<string>(project.priority)
+	const { register, handleSubmit } = useForm({
+		defaultValues: {
+			title: project.title,
+			description: project.description,
+			date: getStringDate(project.dueDate)
+		}
+	})
+	const onSubmit = (data: FieldValues) => {
+		console.log(data)
+	}
+	return (
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className='flex flex-col gap-3'
+		>
+			<input
+				type='text'
+				{...register('title')}
+				placeholder='Title'
+				className='border-1 border-primary rounded-lg p-2 focus:outline-none shadow-lg shadow-md shadow-primary/50'
+			/>
+			<textarea
+				{...register('description')}
+				placeholder='Description'
+				className='border-1 border-primary  rounded-lg p-2 focus:outline-none resize-none h-40 shadow-md shadow-primary/50'
+			/>
+			<div className='flex gap-2 items-center'>
+				<SetIconInput
+					icon={icon}
+					setIcon={setIcon}
+				/>
+				<PrioritySelect
+					priority={priority}
+					setPriority={setPriority}
+				/>
+				<input
+					type='date'
+					{...register('date')}
+					className='border-1 border-primary rounded-lg p-2 focus:outline-none shadow-md shadow-primary/50'
+				/>
+			</div>
+
+			<div className='flex gap-2'>
+				<button
+					type='submit'
+					className='bg-primary text-white rounded-lg py-2 px-5 '
+				>
+					Save
+				</button>
+				<button
+					type='button'
+					className='bg-additional text-white rounded-lg py-2 px-5'
+				>
+					Delete
+				</button>
+			</div>
+		</form>
+	)
+}

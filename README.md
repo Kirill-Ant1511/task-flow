@@ -22,6 +22,8 @@ This is your best task manager...
 
 # Future🚀
 
+Rework relationship model because now it work really bad
+
 - Chats
 - Timeline
 - Statistics

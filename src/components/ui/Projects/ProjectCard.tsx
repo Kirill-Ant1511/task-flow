@@ -1,13 +1,15 @@
+import { Pages } from '@/configs/pages.config'
 import type { ITask } from '@/types/task.types'
 import { daysLeft } from '@/utils/daysLeft'
 import { statusCounter } from '@/utils/statusCounter'
 import cn from 'clsx'
 import { MessageCircle, NotepadTextDashed } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 interface Props {
 	task: ITask
 }
-export function TaskCard({ task }: Props) {
+export function ProjectCard({ task }: Props) {
 	const progress = statusCounter(task)
 	const dueDate = daysLeft(task.dueDate)
 	const progressColor = () => {
@@ -19,7 +21,10 @@ export function TaskCard({ task }: Props) {
 	}
 
 	return (
-		<div className='border-secondary border-2 p-2 rounded-lg shadow-xs flex flex-col gap-2 hover:shadow-lg transition-all duration-150 '>
+		<Link
+			href={Pages.PROJECTS_EDIT(task.id)}
+			className='border-secondary border-2 p-2 rounded-lg shadow-xs flex flex-col gap-2 hover:shadow-lg transition-all duration-150 '
+		>
 			<div className='flex justify-between items-center'>
 				<div className='p-1.5 bg-primary/20 rounded-full'>
 					<task.icon />
@@ -71,6 +76,6 @@ export function TaskCard({ task }: Props) {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	)
 }

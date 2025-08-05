@@ -1,5 +1,5 @@
 import { Pages } from '@/configs/pages.config'
-import type { IMenu } from '@/types/menu.type'
+import type { IMenu } from '@/types/menu.types'
 import {
 	CalendarDays,
 	ChartArea,

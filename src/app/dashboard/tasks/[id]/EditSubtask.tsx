@@ -21,7 +21,7 @@ export function EditSubtask({ id }: Props) {
 		const [title, setTitle] = useState(subTask.title)
 		const [description, setDescription] = useState(subTask.description)
 		const onSubmit = (data: any) => {
-			subTask.title = data.title 
+			subTask.title = data.title
 			subTask.description = data.description
 		}
 		return (

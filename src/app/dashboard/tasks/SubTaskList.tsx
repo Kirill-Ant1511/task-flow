@@ -1,5 +1,5 @@
 'use client'
-import { SubtaskCard } from '@/components/ui/Tasks/SubtaskCard'
+import { TaskCard } from '@/components/ui/Projects/TaskCard'
 import { mockSubTasks } from '@/data/mock/Task'
 import { useEffect, useState } from 'react'
 
@@ -11,7 +11,7 @@ export function SubtasksList() {
 	return (
 		<div className='overflow-y-auto flex flex-col gap-4 max-h-[91vh]'>
 			{subTasks.map(subTask => (
-				<SubtaskCard
+				<TaskCard
 					key={subTask.id}
 					subtask={subTask}
 				/>

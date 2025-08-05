@@ -1,12 +1,9 @@
-import { TaskFilter } from '@/components/ui/Tasks/TaskFilter'
-import { mockTasks } from '@/data/mock/Task'
-import { TaskList } from './TaskList'
+import { ProjectsList } from './ProjectsList'
 
 export default function ProjectsPage() {
 	return (
 		<div>
-			
-			<TaskList />
+			<ProjectsList />
 		</div>
 	)
 }

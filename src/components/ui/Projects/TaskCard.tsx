@@ -8,7 +8,7 @@ interface Props {
 	projectTitle?: string
 }
 
-export function SubtaskCard({ subtask, projectTitle }: Props) {
+export function TaskCard({ subtask, projectTitle }: Props) {
 	const completedSubTask = () => {
 		subtask.isCompleted = !subtask.isCompleted
 	}
@@ -23,7 +23,7 @@ export function SubtaskCard({ subtask, projectTitle }: Props) {
 				)}
 			</button>
 			<Link
-				href={Pages.SUBTASKEDIT(subtask.id)}
+				href={Pages.TASKS_EDIT(subtask.id)}
 				className='flex justify-between w-full truncate items-center gap-5'
 			>
 				<div>{subtask.title}</div>
