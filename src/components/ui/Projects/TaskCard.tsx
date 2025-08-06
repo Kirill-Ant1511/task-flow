@@ -13,7 +13,7 @@ export function TaskCard({ subtask, projectTitle }: Props) {
 		subtask.isCompleted = !subtask.isCompleted
 	}
 	return (
-		<div className='flex gap-2 p-2 rounded-lg border-2 border-foreground/20 shadow-md hover:bg-foreground/5 transition-color duration-150 h-fit cursor-pointer relative items-center'>
+		<div className='flex gap-2 p-2 rounded-lg border-2 border-foreground/20 shadow-md shadow-primary hover:bg-foreground/5 transition-color duration-150 h-fit cursor-pointer relative items-center'>
 			<button
 				className='w-6 h-6 border-2 border-foreground rounded-lg shrink-0'
 				onClick={() => completedSubTask()}

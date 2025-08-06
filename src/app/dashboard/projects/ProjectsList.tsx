@@ -6,21 +6,21 @@ import type { ITask } from '@/types/task.types'
 import { useEffect, useState } from 'react'
 
 export function ProjectsList() {
-	const [tasks, setTasks] = useState<ITask[]>()
+	const [projects, setProjects] = useState<ITask[]>()
 	useEffect(() => {
-		setTasks(mockTasks)
+		setProjects(mockTasks)
 	}, [])
-	if (tasks) {
+	if (projects) {
 		return (
 			<div>
 				<div>
 					<TaskFilter
-						tasks={tasks}
-						setTasks={setTasks}
+						tasks={projects}
+						setTasks={setProjects}
 					/>
 				</div>
 				<div className='grid grid-cols-4 gap-4'>
-					{tasks.map(task => (
+					{projects.map(task => (
 						<ProjectCard
 							task={task}
 							key={task.id}

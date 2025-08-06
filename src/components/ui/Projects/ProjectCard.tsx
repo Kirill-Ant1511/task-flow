@@ -23,15 +23,17 @@ export function ProjectCard({ task }: Props) {
 	return (
 		<Link
 			href={Pages.PROJECTS_EDIT(task.id)}
-			className='border-secondary border-2 p-2 rounded-lg shadow-xs flex flex-col gap-2 hover:shadow-lg transition-all duration-150 '
+			className='border-secondary border-2 p-2 rounded-lg shadow-xs shadow-primary/50 flex flex-col gap-3 hover:shadow-lg transition-all duration-150 '
 		>
-			<div className='flex justify-between items-center'>
-				<div className='p-1.5 bg-primary/20 rounded-full'>
+			<div className='grid grid-cols-[0.5fr_2fr_1fr] gap-2 justify-center items-center '>
+				<div className='w-8 h-8 p-1.5 bg-primary/20 rounded-full flex items-center justify-center'>
 					<task.icon />
 				</div>
 
-				<p className='text-base font-semibold'>{task.title}</p>
-				<p className='text-foreground/50'>{dueDate} days left</p>
+				<p className='text-base font-semibold overflow-hidden text-nowrap text-ellipsis text-center'>
+					{task.title}
+				</p>
+				<p className='text-foreground/50 text-xs'>{dueDate} days left</p>
 			</div>
 			<div className='flex justify-between items-center'>
 				<p className='w-fit px-2 py-1 bg-additional/20 rounded-lg'>

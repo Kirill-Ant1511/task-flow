@@ -13,6 +13,7 @@ export default function DashboardLayout({ children, modals }: Props) {
 			<Sidebar />
 			<main className='p-4 overflow-y-scroll'>
 				<DashboardHeading />
+
 				{children}
 			</main>
 			{modals}

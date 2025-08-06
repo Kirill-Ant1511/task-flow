@@ -1,5 +1,6 @@
+'use client'
 import { PrioritySelect } from '@/components/ui/Projects/Form/PrioritySelect'
-import type { ITask } from '@/types/task.types'
+import type { ITask, Priority } from '@/types/task.types'
 import { getStringDate } from '@/utils/getStringDate'
 import type { LucideIcon } from 'lucide-react'
 
@@ -22,7 +23,11 @@ export function EditForm({ project }: Props) {
 		}
 	})
 	const onSubmit = (data: FieldValues) => {
-		console.log(data)
+		project.title = data.title
+		project.description = data.description
+		project.dueDate = new Date(data.date)
+		project.priority = priority as Priority
+		project.icon = icon
 	}
 	return (
 		<form
@@ -33,7 +38,7 @@ export function EditForm({ project }: Props) {
 				type='text'
 				{...register('title')}
 				placeholder='Title'
-				className='border-1 border-primary rounded-lg p-2 focus:outline-none shadow-lg shadow-md shadow-primary/50'
+				className='border-1 border-primary rounded-lg p-2 focus:outline-none shadow-md shadow-primary/50'
 			/>
 			<textarea
 				{...register('description')}
