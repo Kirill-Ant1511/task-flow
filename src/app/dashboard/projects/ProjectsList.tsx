@@ -1,24 +1,19 @@
 'use client'
 import { ProjectCard } from '@/components/ui/Projects/ProjectCard'
-import { TaskFilter } from '@/components/ui/Projects/TaskFilter'
-import { mockTasks } from '@/data/mock/Task'
-import type { ITask } from '@/types/task.types'
-import { useEffect, useState } from 'react'
+import { useAppSelector } from '@/hooks/useAppSelector'
 
 export function ProjectsList() {
-	const [projects, setProjects] = useState<ITask[]>()
-	useEffect(() => {
-		setProjects(mockTasks)
-	}, [])
+	const projects = useAppSelector(state => state.project)
+
 	if (projects) {
 		return (
 			<div>
-				<div>
+				{/* <div>
 					<TaskFilter
 						tasks={projects}
 						setTasks={setProjects}
 					/>
-				</div>
+				</div> */}
 				<div className='grid grid-cols-4 gap-4'>
 					{projects.map(task => (
 						<ProjectCard

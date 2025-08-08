@@ -1,5 +1,7 @@
+import { Pages } from '@/configs/pages.config'
 import { HelpCircle, LogOut } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Menu } from './Menu'
 import { Projects } from './Projects'
 import { SearchField } from './SearchField'
@@ -33,10 +35,13 @@ export function Sidebar() {
 					<p>Help</p>
 				</button>
 
-				<button className='flex gap-2 items-center px-4 hover:text-primary transition-all duration-200 cursor-pointer'>
+				<Link
+					href={Pages.HOME}
+					className='flex gap-2 items-center px-4 hover:text-primary transition-all duration-200 cursor-pointer'
+				>
 					<LogOut />
 					<p>Log Out</p>
-				</button>
+				</Link>
 			</div>
 		</div>
 	)

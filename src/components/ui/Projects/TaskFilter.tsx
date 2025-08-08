@@ -18,7 +18,7 @@ export function TaskFilter({ tasks, setTasks }: Props) {
 			setTasks(mockTasks.filter(task => task.priority === priorityFilter))
 		if (searchValue !== '')
 			setTasks(
-				tasks.filter(task =>
+				mockTasks.filter(task =>
 					task.title.toLowerCase().includes(searchValue.toLowerCase())
 				)
 			)
@@ -33,7 +33,7 @@ export function TaskFilter({ tasks, setTasks }: Props) {
 					placeholder='Search'
 					value={searchValue}
 					onChange={e => setSearchValue(e.target.value)}
-					className='bg-secondary border-2 border-foreground/20 rounded-lg p-2'
+					className='bg-secondary border-2 border-foreground/20 rounded-lg p-2 focus:outline-none'
 				/>
 			</div>
 			<div className=' relative w-fit'>
@@ -48,7 +48,7 @@ export function TaskFilter({ tasks, setTasks }: Props) {
 					<ChevronDown size={20} />
 				</button>
 				{openPrioritySelect && (
-					<div className='absolute w-full bg-secondary p-2 rounded-lg flex flex-col gap-2 mt-1'>
+					<div className='absolute w-full bg-secondary p-2 rounded-lg flex flex-col gap-2 mt-1 z-50'>
 						<button
 							className='bg-primary/20 w-full py-1 px-2 text-start rounded-lg hover:bg-primary/50 transition-all duration-150'
 							onClick={() => {

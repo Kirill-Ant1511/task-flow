@@ -4,6 +4,8 @@ import type { ITask, Priority } from '@/types/task.types'
 import { getStringDate } from '@/utils/getStringDate'
 import type { LucideIcon } from 'lucide-react'
 
+import { useAppDispatch } from '@/hooks/useAppDispatch'
+import { updateProject } from '@/store/project.slice'
 import cn from 'clsx'
 import { useState } from 'react'
 import { useForm, type FieldValues } from 'react-hook-form'
@@ -15,6 +17,7 @@ interface Props {
 export function EditForm({ project }: Props) {
 	const [icon, setIcon] = useState<LucideIcon>(project.icon)
 	const [isGreat, setIsGreat] = useState(false)
+	const dispatch = useAppDispatch()
 	const [priority, setPriority] = useState<string>(project.priority)
 	const { register, handleSubmit } = useForm({
 		defaultValues: {
@@ -24,11 +27,18 @@ export function EditForm({ project }: Props) {
 		}
 	})
 	const onSubmit = (data: FieldValues) => {
-		project.title = data.title
-		project.description = data.description
-		project.dueDate = new Date(data.date)
-		project.priority = priority as Priority
-		project.icon = icon
+		const uptProject: ITask = {
+			id: project.id,
+			title: data.title,
+			description: data.description,
+			dueDate: new Date(data.date),
+			priority: priority as Priority,
+			icon: icon,
+			users: project.users,
+			subTasks: project.subTasks,
+			comments: project.comments
+		}
+		dispatch(updateProject({ projectId: project.id, newProject: uptProject }))
 		setIsGreat(true)
 		setTimeout(() => {
 			setIsGreat(false)

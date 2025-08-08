@@ -95,10 +95,12 @@ export const mockTasks: ITask[] = [
 		subTasks: [
 			mockSubTasks[2],
 			mockSubTasks[3],
-			mockSubTasks[3],
-			mockSubTasks[3],
-			mockSubTasks[3],
-			mockSubTasks[8]
+			mockSubTasks[4],
+			mockSubTasks[5],
+			mockSubTasks[6],
+			mockSubTasks[7],
+			mockSubTasks[8],
+			mockSubTasks[9]
 		],
 		icon: Calendar,
 		dueDate: new Date('2025-09-11'),

@@ -24,7 +24,7 @@ export function EditModal({ id }: Props) {
 	return (
 		<div className='fixed top-0 left-0 min-w-screen min-h-screen bg-primary/50 flex gap-2 items-center justify-center z-100'>
 			<div className='bg-white p-3 rounded-lg w-4/8 grid grid-cols-[2fr_1fr] gap-4'>
-				<div className='overflow-hidden'>
+				<div>
 					<div className='grid grid-cols-[6fr_0.5fr] justify-between items-center mb-4'>
 						<h1 className='text-2xl font-bold text-nowrap overflow-hidden text-ellipsis'>
 							Edit project:{' '}
@@ -42,7 +42,7 @@ export function EditModal({ id }: Props) {
 					</div>
 					<EditForm project={project} />
 				</div>
-				<div>
+				<div className='overflow-y-scroll no-scrollbar h-90'>
 					<h1 className='text-2xl font-bold'>Tasks</h1>
 					<div className='flex flex-col gap-2 p-2  bg-white rounded-lg w-full'>
 						{project.subTasks.map(task => (

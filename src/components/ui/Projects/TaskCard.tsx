@@ -1,5 +1,7 @@
 'use client'
 import { Pages } from '@/configs/pages.config'
+import { useAppDispatch } from '@/hooks/useAppDispatch'
+import { toggleCompleteState } from '@/store/subtask.slice'
 import type { ISubTask } from '@/types/task.types'
 import Link from 'next/link'
 
@@ -9,8 +11,9 @@ interface Props {
 }
 
 export function TaskCard({ subtask, projectTitle }: Props) {
+	const dispatch = useAppDispatch()
 	const completedSubTask = () => {
-		subtask.isCompleted = !subtask.isCompleted
+		dispatch(toggleCompleteState({ subtaskId: subtask.id }))
 	}
 	return (
 		<div className='flex gap-2 p-2 rounded-lg border-2 border-foreground/20 shadow-md shadow-primary hover:bg-foreground/5 transition-color duration-150 h-fit cursor-pointer relative items-center'>
