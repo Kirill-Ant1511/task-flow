@@ -101,7 +101,7 @@ export const mockTasks: ITask[] = [
 			mockSubTasks[8]
 		],
 		icon: Calendar,
-		dueDate: new Date('2025-08-11'),
+		dueDate: new Date('2025-09-11'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[2], mockMessages[3], mockMessages[5]],
 		priority: Priority.Low
@@ -117,7 +117,7 @@ export const mockTasks: ITask[] = [
 			mockSubTasks[9]
 		],
 		icon: Check,
-		dueDate: new Date('2025-08-12'),
+		dueDate: new Date('2025-02-12'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[4], mockMessages[5]],
 		priority: Priority.Low
@@ -135,7 +135,7 @@ export const mockTasks: ITask[] = [
 			mockSubTasks[9]
 		],
 		icon: FileText,
-		dueDate: new Date('2025-08-13'),
+		dueDate: new Date('2025-05-13'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[6]],
 		priority: Priority.High
@@ -146,7 +146,7 @@ export const mockTasks: ITask[] = [
 		description: 'Write unit and integration tests',
 		subTasks: [mockSubTasks[7]],
 		icon: Flag,
-		dueDate: new Date('2025-08-14'),
+		dueDate: new Date('2025-04-14'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[7]],
 		priority: Priority.Low
@@ -157,7 +157,7 @@ export const mockTasks: ITask[] = [
 		description: 'Resolve issues from QA',
 		subTasks: [mockSubTasks[8]],
 		icon: Folder,
-		dueDate: new Date('2025-08-15'),
+		dueDate: new Date('2025-12-15'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[8]],
 		priority: Priority.Low
@@ -190,7 +190,7 @@ export const mockTasks: ITask[] = [
 		description: 'Analyze user behavior',
 		subTasks: [mockSubTasks[1], mockSubTasks[5]],
 		icon: StickyNote,
-		dueDate: new Date('2025-08-18'),
+		dueDate: new Date('2025-11-18'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[1], mockMessages[5]],
 		priority: Priority.Middle
@@ -201,7 +201,7 @@ export const mockTasks: ITask[] = [
 		description: 'Optimize API and frontend',
 		subTasks: [mockSubTasks[2], mockSubTasks[8]],
 		icon: User,
-		dueDate: new Date('2025-08-19'),
+		dueDate: new Date('2025-10-19'),
 		users: [mockProfiles[1], mockProfiles[4]],
 		comments: [mockMessages[2], mockMessages[8]],
 		priority: Priority.High

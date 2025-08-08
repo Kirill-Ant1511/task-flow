@@ -1,5 +1,9 @@
-import { Soon } from '@/components/other ui/Soon'
+import { Timeline } from './Timeline'
 
 export default function SchedulePage() {
-	return <Soon title='Schedule' />
+	return (
+		<div className='overflow-x-scroll no-scrollbar'>
+			<Timeline />
+		</div>
+	)
 }

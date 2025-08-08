@@ -9,9 +9,9 @@ interface Props {
 
 export default function DashboardLayout({ children, modals }: Props) {
 	return (
-		<div className='grid grid-cols-[17%_83%] min-h-screen max-h-screen'>
+		<div className='grid grid-cols-[17%_83%] min-h-screen max-h-screen no-scrollbar'>
 			<Sidebar />
-			<main className='p-4 overflow-y-scroll'>
+			<main className='p-4'>
 				<DashboardHeading />
 
 				{children}

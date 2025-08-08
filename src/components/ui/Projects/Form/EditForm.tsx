@@ -4,16 +4,17 @@ import type { ITask, Priority } from '@/types/task.types'
 import { getStringDate } from '@/utils/getStringDate'
 import type { LucideIcon } from 'lucide-react'
 
+import cn from 'clsx'
 import { useState } from 'react'
 import { useForm, type FieldValues } from 'react-hook-form'
 import { SetIconInput } from './SetIconInput'
-
 interface Props {
 	project: ITask
 }
 
 export function EditForm({ project }: Props) {
 	const [icon, setIcon] = useState<LucideIcon>(project.icon)
+	const [isGreat, setIsGreat] = useState(false)
 	const [priority, setPriority] = useState<string>(project.priority)
 	const { register, handleSubmit } = useForm({
 		defaultValues: {
@@ -28,12 +29,26 @@ export function EditForm({ project }: Props) {
 		project.dueDate = new Date(data.date)
 		project.priority = priority as Priority
 		project.icon = icon
+		setIsGreat(true)
+		setTimeout(() => {
+			setIsGreat(false)
+		}, 3000)
 	}
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
 			className='flex flex-col gap-3'
 		>
+			<div
+				className={cn(
+					isGreat
+						? 'opacity-100 top-5 right-1/2'
+						: 'opacity-100 -top-20 right-1/2',
+					'fixed  p-2 bg-teal-300/50 border-2 border-emerald-500 rounded-lg transition-all duration-300'
+				)}
+			>
+				Edit success
+			</div>
 			<input
 				type='text'
 				{...register('title')}

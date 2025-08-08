@@ -6,7 +6,7 @@ import { SearchField } from './SearchField'
 import { SubHeading } from './SubHeading'
 export function Sidebar() {
 	return (
-		<div className='min-h-[100vh] bg-secondary border-r-2 border-foreground/10 flex flex-col justify-between overflow-y-scroll'>
+		<div className='min-h-[100vh] bg-secondary border-r-2 border-foreground/10 flex flex-col justify-between overflow-y-scroll no-scrollbar'>
 			<div>
 				<div className='flex items-center gap-2 p-4'>
 					<Image
