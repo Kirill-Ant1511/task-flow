@@ -39,10 +39,14 @@ export function ProjectCard({ task }: Props) {
 				<p
 					className={cn(
 						'text-foreground/50 text-xs',
-						dueDate < 0 && 'text-red-400'
+						dueDate < 0 && progress < 100 && 'text-red-400'
 					)}
 				>
-					{dueDate} days left
+					{dueDate < 0
+						? progress < 100
+							? dueDate * -1 + ' days overdue'
+							: 'complete'
+						: dueDate + ' days left'}
 				</p>
 			</div>
 			<div className='flex justify-between items-center'>
