@@ -1,6 +1,6 @@
 'use client'
 import { ProjectCard } from '@/components/ui/Projects/ProjectCard'
-import { mockTasks } from '@/data/mock/Task'
+import { useAppSelector } from '@/hooks/useAppSelector'
 import { ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
 
@@ -20,7 +20,7 @@ const MONTH = [
 ]
 export function Timeline() {
 	const [filter, setFilter] = useState<string | null>()
-
+	const projects = useAppSelector(state => state.project)
 	return (
 		<div className=''>
 			<div></div>
@@ -38,7 +38,7 @@ export function Timeline() {
 							>
 								{month}
 							</button>
-							{mockTasks.map(task => {
+							{projects.map(task => {
 								if (task.dueDate.getMonth() === index)
 									return (
 										<ProjectCard
