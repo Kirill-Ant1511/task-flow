@@ -43,7 +43,7 @@ export function EditForm({ project }: Props) {
 		setIsGreat(true)
 		setTimeout(() => {
 			setIsGreat(false)
-		}, 3000)
+		}, 1000)
 	}
 	return (
 		<form

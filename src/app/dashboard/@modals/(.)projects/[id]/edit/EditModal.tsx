@@ -1,7 +1,7 @@
 'use client'
 import { EditForm } from '@/components/elements/Projects/Form/EditForm'
 import { TaskCard } from '@/components/elements/Projects/TaskCard'
-import { mockTasks } from '@/data/mock/Task'
+import { useAppSelector } from '@/hooks/useAppSelector'
 import { X } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useMemo } from 'react'
@@ -12,9 +12,10 @@ interface Props {
 
 export function EditModal({ id }: Props) {
 	const router = useRouter()
+	const projects = useAppSelector(state => state.project)
 	const project = useMemo(
-		() => mockTasks.find(project => project.id === id),
-		[id]
+		() => projects.find(project => project.id === id),
+		[id, projects]
 	)
 
 	const onClose = () => {
