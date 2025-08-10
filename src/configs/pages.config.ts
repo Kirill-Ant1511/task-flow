@@ -7,6 +7,9 @@ export class Pages {
 	static SCHEDULE = Pages.BASE + '/schedule'
 	static ACTIVITY = Pages.BASE + '/activity'
 	static TEAM = Pages.BASE + '/my-team'
+	static AUTH_BASE = '/auth'
+	static SIGNIN = Pages.AUTH_BASE + '/signin'
+	static SIGNUP = Pages.AUTH_BASE + '/signup'
 	static TASKS_EDIT(id: string) {
 		return Pages.TASKS + `/${id}`
 	}

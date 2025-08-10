@@ -1,5 +1,5 @@
 'use client'
-import { ProjectCard } from '@/components/ui/Projects/ProjectCard'
+import { ProjectCard } from '@/components/elements/Projects/ProjectCard'
 import { useAppSelector } from '@/hooks/useAppSelector'
 import { ArrowLeft } from 'lucide-react'
 import { useState } from 'react'

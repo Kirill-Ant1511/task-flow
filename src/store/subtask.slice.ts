@@ -15,9 +15,24 @@ export const subtaskSlice = createSlice({
 			const { subtaskId } = action.payload
 			const subtask = state.find(subtask => subtask.id === subtaskId)
 			if (subtask) subtask.isCompleted = !subtask.isCompleted
+		},
+		updateSubtask: (
+			state,
+			action: PayloadAction<{
+				subtaskId: string
+				subtaskTitle: string
+				subtaskDescription: string
+			}>
+		) => {
+			const { subtaskId, subtaskTitle, subtaskDescription } = action.payload
+			const subtask = state.find(subtask => subtask.id === subtaskId)
+			if (subtask) {
+				subtask.title = subtaskTitle
+				subtask.description = subtaskDescription
+			}
 		}
 	}
 })
 
-export const { toggleCompleteState } = subtaskSlice.actions
+export const { toggleCompleteState, updateSubtask } = subtaskSlice.actions
 export default subtaskSlice.reducer

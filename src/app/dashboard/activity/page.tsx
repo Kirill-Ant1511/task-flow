@@ -1,3 +1,5 @@
+import { Soon } from '@/components/ui/Soon'
+
 export default function ActivityPage() {
-	return <div>Activity Page</div>
+	return <Soon title='Activity' />
 }

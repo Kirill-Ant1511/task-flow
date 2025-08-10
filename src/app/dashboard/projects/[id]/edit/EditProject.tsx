@@ -1,8 +1,8 @@
 'use client'
-import { TaskCard } from '@/components/ui/Projects/TaskCard'
+import { EditForm } from '@/components/elements/Projects/Form/EditForm'
+import { TaskCard } from '@/components/elements/Projects/TaskCard'
 import { getProjectFromId } from '@/utils/getProjectFromId'
 import { useMemo } from 'react'
-import { EditForm } from '../../../../../components/ui/Projects/Form/EditForm'
 
 interface Props {
 	id: string

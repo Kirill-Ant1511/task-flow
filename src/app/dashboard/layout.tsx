@@ -1,7 +1,10 @@
-import { ProviderRedux } from '@/components/provider/ProviderRedux'
-import { DashboardHeading } from '@/components/ui/Dashboard/DashboardHeading'
-import { Sidebar } from '@/components/ui/Sidebar/Sidebar'
+import { DashboardHeading } from '@/components/elements/Dashboard/DashboardHeading'
+import { Sidebar } from '@/components/elements/Sidebar/Sidebar'
+import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import { ProviderRedux } from '../../../provider/ProviderRedux'
+
+
 
 interface Props {
 	children: ReactNode

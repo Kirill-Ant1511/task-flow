@@ -1,5 +1,5 @@
 'use client'
-import { PrioritySelect } from '@/components/ui/Projects/Form/PrioritySelect'
+
 import type { ITask, Priority } from '@/types/task.types'
 import { getStringDate } from '@/utils/getStringDate'
 import type { LucideIcon } from 'lucide-react'
@@ -9,6 +9,7 @@ import { updateProject } from '@/store/project.slice'
 import cn from 'clsx'
 import { useState } from 'react'
 import { useForm, type FieldValues } from 'react-hook-form'
+import { PrioritySelect } from './PrioritySelect'
 import { SetIconInput } from './SetIconInput'
 interface Props {
 	project: ITask

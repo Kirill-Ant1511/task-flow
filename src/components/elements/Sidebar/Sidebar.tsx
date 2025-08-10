@@ -12,10 +12,10 @@ export function Sidebar() {
 			<div>
 				<div className='flex items-center gap-2 p-4'>
 					<Image
-						src='/logo.png'
+						src='/logo.svg'
 						alt='Logo'
-						width={50}
-						height={50}
+						width={40}
+						height={40}
 					/>
 					<h1 className='text-xl text-primary font-semibold'>Taskflow</h1>
 				</div>

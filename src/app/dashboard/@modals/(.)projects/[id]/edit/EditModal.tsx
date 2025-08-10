@@ -1,6 +1,6 @@
 'use client'
-import { EditForm } from '@/components/ui/Projects/Form/EditForm'
-import { TaskCard } from '@/components/ui/Projects/TaskCard'
+import { EditForm } from '@/components/elements/Projects/Form/EditForm'
+import { TaskCard } from '@/components/elements/Projects/TaskCard'
 import { mockTasks } from '@/data/mock/Task'
 import { X } from 'lucide-react'
 import { useRouter } from 'next/navigation'

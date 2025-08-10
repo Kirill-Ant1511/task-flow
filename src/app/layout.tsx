@@ -9,10 +9,13 @@ const poppinsFont = Poppins({
 })
 
 export const metadata: Metadata = {
-	title: 'Task Flow',
+	title: {
+		absolute: 'Taskflow',
+		template: '%s | Taskflow'
+	},
 	description: 'Best task manager for you',
 	icons: {
-		icon: '/logo.png'
+		icon: '/logo.svg'
 	}
 }
 

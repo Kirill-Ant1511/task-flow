@@ -1,5 +1,6 @@
 'use client'
-import { TaskCard } from '@/components/ui/Projects/TaskCard'
+
+import { TaskCard } from '@/components/elements/Projects/TaskCard'
 import { useAppSelector } from '@/hooks/useAppSelector'
 
 export function SubtasksList() {

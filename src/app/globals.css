@@ -2,6 +2,11 @@
 * {
 	box-sizing: border-box;
 }
+
+input:focus {
+	outline: none;
+}
+
 :root {
 	--primary: #2984ff;
 	--secondary: #eaf4ff;
@@ -16,6 +21,58 @@
 	--color-additional: var(--additional);
 }
 
+@keyframes view_left {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes view_right {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes middle-left {
+	from {
+		transform: translateX(-40%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+@keyframes middle-right {
+	from {
+		transform: translateX(40%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes bounce-size {
+	from {
+		transform: scale(0.5);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
 @layer utilities {
 	.no-scrollbar {
 		-ms-overflow-style: none;
@@ -23,5 +80,24 @@
 	}
 	.no-scrollbar::-webkit-scrollbar {
 		display: none;
+	}
+
+	.animate-left {
+		animation: view_left 0.5s cubic-bezier(0.5, 1.38, 0.6, 1.04);
+	}
+	.animate-right {
+		animation: view_right 0.5s cubic-bezier(0.5, 1.38, 0.6, 1.04);
+	}
+
+	.animate-middle-left {
+		animation: middle-left 1s ease;
+	}
+
+	.animate-middle-right {
+		animation: middle-right 1s ease;
+	}
+
+	.animate-bounce-size {
+		animation: bounce-size 0.4s cubic-bezier(0.42, 1.5, 0.74, 1.32);
 	}
 }

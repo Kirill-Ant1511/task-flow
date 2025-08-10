@@ -21,9 +21,7 @@ export function TaskCard({ subtask, projectTitle }: Props) {
 				className='w-6 h-6 border-2 border-foreground rounded-lg shrink-0'
 				onClick={() => completedSubTask()}
 			>
-				{subtask.isCompleted && (
-					<div className='bg-primary/50 w-full h-full rounded-lg' />
-				)}
+				{subtask.isCompleted && <div className='bg-primary/50 w-full h-full' />}
 			</button>
 			<Link
 				href={Pages.TASKS_EDIT(subtask.id)}

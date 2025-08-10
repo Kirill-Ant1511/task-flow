@@ -1,5 +1,6 @@
 'use client'
-import { ProjectCard } from '@/components/ui/Projects/ProjectCard'
+
+import { ProjectCard } from '@/components/elements/Projects/ProjectCard'
 import { useAppSelector } from '@/hooks/useAppSelector'
 
 export function ProjectsList() {

@@ -1,3 +1,5 @@
+import { Soon } from '@/components/ui/Soon'
+
 export default function TeamPage() {
-	return <div>My Team Page</div>
+	return <Soon title='Teams' />
 }

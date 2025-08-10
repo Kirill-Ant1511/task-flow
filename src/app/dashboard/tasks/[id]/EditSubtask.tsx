@@ -1,6 +1,8 @@
 'use client'
 import { Pages } from '@/configs/pages.config'
-import { mockSubTasks } from '@/data/mock/Task'
+import { useAppDispatch } from '@/hooks/useAppDispatch'
+import { useAppSelector } from '@/hooks/useAppSelector'
+import { updateSubtask } from '@/store/subtask.slice'
 import { useRouter } from 'next/navigation'
 import { useMemo, useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -10,10 +12,12 @@ interface Props {
 }
 
 export function EditSubtask({ id }: Props) {
+	const subtasks = useAppSelector(state => state.subtask)
 	const subTask = useMemo(
-		() => mockSubTasks.find(subTask => subTask.id === id),
+		() => subtasks.find(subTask => subTask.id === id),
 		[id]
 	)
+	const dispatch = useAppDispatch()
 	const navigation = useRouter()
 	const { register, handleSubmit } = useForm()
 
@@ -21,8 +25,13 @@ export function EditSubtask({ id }: Props) {
 		const [title, setTitle] = useState(subTask.title)
 		const [description, setDescription] = useState(subTask.description)
 		const onSubmit = (data: any) => {
-			subTask.title = data.title
-			subTask.description = data.description
+			dispatch(
+				updateSubtask({
+					subtaskId: id,
+					subtaskTitle: data.title,
+					subtaskDescription: data.description
+				})
+			)
 		}
 		return (
 			<div className='h-full flex flex-col'>
