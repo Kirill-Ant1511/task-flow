@@ -36,9 +36,13 @@ export const projectSlice = createSlice({
 					subtask.isCompleted = !subtask.isCompleted
 				}
 			}
+		},
+		createProject: (state, action: PayloadAction<ITask>) => {
+			state.push(action.payload)
 		}
 	}
 })
 
-export const { updateProject, toggleCompleteSubTask } = projectSlice.actions
+export const { updateProject, toggleCompleteSubTask, createProject } =
+	projectSlice.actions
 export default projectSlice.reducer

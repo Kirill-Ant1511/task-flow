@@ -18,7 +18,7 @@ export function Header() {
 				</h1>
 			</div>
 			<nav className='space-x-2'>
-				<Link href={'/dashboard'}>Go To Dashboard</Link>
+				<Link href={'/dashboard'}>Demo</Link>
 				<Link
 					href={Pages.SIGNIN}
 					className='p-2 bg-primary/40 rounded-lg hover:opacity-70 transition-all duration-150'
