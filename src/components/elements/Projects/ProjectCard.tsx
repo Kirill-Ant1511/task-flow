@@ -58,9 +58,7 @@ export function ProjectCard({ task }: Props) {
 				</div>
 			</div>
 
-			<div className='text-foreground/50 overflow-hidden text-nowrap'>
-				{task.description}
-			</div>
+			<div className='text-foreground/50 line-clamp-1'>{task.description}</div>
 			<div className='w-[90%] h-0.5 bg-secondary/50 self-center' />
 			<div className='flex justify-between items-center'>
 				<div className='flex -space-x-1.5'>

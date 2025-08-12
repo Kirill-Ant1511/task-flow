@@ -32,7 +32,6 @@ export function CreateForm() {
 			priority: priority as Priority
 		}
 		dispatch(createProject(newProject))
-		console.log(data)
 	}
 	return (
 		<form
